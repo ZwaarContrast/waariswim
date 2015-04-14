@@ -1,0 +1,164 @@
+//Compass imports
+@import 'compass/reset/';
+@import 'compass/css3/';
+@import 'compass/utilities';
+@import 'compass/typography';
+
+//General styling
+body{
+	background-color: #212124;
+}
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  font-family:'Helvetica Neue','Helvetica',sans-serif;
+}
+
+.photo-text{
+	position: absolute;
+	width: 100%;
+	top:5%;
+	left: 0;
+	text-align: center;
+	@include text-shadow(2px 2px #000000);
+	color:white;
+	font-size:4em;
+	z-index:2;
+}
+.photo-holder{
+	position: relative;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+.photo{
+	position:absolute;
+	z-index:1;
+	width:100%;
+	top:50%;
+	left:50%;
+	z-index:1;
+	@include transform(translate3d(-50%,-50%,0))
+}
+.score-holder{
+	position:absolute;
+	top:10%;
+	right:20px;
+	z-index:3;
+	@include text-shadow(2px 2px #000000);
+	color:white;
+	font-size:2em;
+}
+#shoutout{
+	position:absolute;
+	bottom:280px;
+	right: 340px;
+	z-index:3;
+	display:none;
+	text-align: center;
+	
+	font-size:2.3em;
+	
+
+	.bubble{
+		display:block;
+		position: relative;
+		
+		padding: 20px;
+		background: #FFFFFF;
+		-webkit-border-radius: 14px;
+		-moz-border-radius: 14px;
+		border-radius: 14px;
+		min-height:50px;
+		&.positive{
+		color:black;
+	}
+	&.negative{
+		color:red;
+	}
+		&:after{
+			content: '';
+			position: absolute;
+			border-style: solid;
+			border-width: 20px 0 20px 27px;
+			border-color: transparent #FFFFFF;
+			display: block;
+			width: 0;
+			z-index: 1;
+			right: -27px;
+			top: 50%;
+			@include translateY(-50%);
+		}
+	}
+}
+#choices{
+	position:absolute;
+	z-index:4;
+	width:100%;
+	top:50%;
+	left:1%;
+	@include transform(translate3d(0,-50%,0));
+	a{
+		float:left;
+		clear: both;
+		@include text-shadow(2px 2px #000000);
+		color:white;
+		font-size:3em;
+		line-height:1.25em;
+		&.error{
+			  text-decoration: line-through;
+			  color:red;
+			  cursor:default;
+			  pointer-events:none;
+		}
+		&.true{
+			 color:green;
+			  cursor:default;
+			  pointer-events:none;
+		}
+	}
+
+}
+.photo-person-holder{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width:500px;
+	height:500px;
+	max-width:800px;
+	z-index: 9;
+}
+.photo-person-part{
+	position:absolute;
+	width:500px;
+	z-index:10;
+
+}
+.photo-person-top{
+	bottom:282px;
+	transform-origin:center center;
+	&.animate{
+		-webkit-animation: bounce .5s infinite;
+	}
+}
+.photo-person-bottom{
+	bottom:0;
+}
+@-webkit-keyframes bounce {
+    0%{
+		@include transform(translateY(0px));
+    }
+    25%{
+		@include transform(translateY(-40px) rotate(5deg) translateX(10px));
+    }
+    50%{
+		@include transform(translateY(0px));
+    }
+    75%{
+		@include transform(translateY(-40px) rotate(-5deg) translateX(-10px));
+    }
+    100%{
+		@include transform(translateY(0px));
+    }
+}

@@ -1,0 +1,271 @@
+/* line 5, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 8, ../scss/screen.scss */
+body {
+  background-color: #212124;
+}
+
+/* line 11, ../scss/screen.scss */
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  font-family: 'Helvetica Neue','Helvetica',sans-serif;
+}
+
+/* line 18, ../scss/screen.scss */
+.photo-text {
+  position: absolute;
+  width: 100%;
+  top: 5%;
+  left: 0;
+  text-align: center;
+  text-shadow: 2px 2px #000000;
+  color: white;
+  font-size: 4em;
+  z-index: 2;
+}
+
+/* line 29, ../scss/screen.scss */
+.photo-holder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 35, ../scss/screen.scss */
+.photo {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+/* line 44, ../scss/screen.scss */
+.score-holder {
+  position: absolute;
+  top: 10%;
+  right: 20px;
+  z-index: 3;
+  text-shadow: 2px 2px #000000;
+  color: white;
+  font-size: 2em;
+}
+
+/* line 53, ../scss/screen.scss */
+#shoutout {
+  position: absolute;
+  bottom: 280px;
+  right: 340px;
+  z-index: 3;
+  display: none;
+  text-align: center;
+  font-size: 2.3em;
+}
+/* line 64, ../scss/screen.scss */
+#shoutout .bubble {
+  display: block;
+  position: relative;
+  padding: 20px;
+  background: #FFFFFF;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+  min-height: 50px;
+}
+/* line 74, ../scss/screen.scss */
+#shoutout .bubble.positive {
+  color: black;
+}
+/* line 77, ../scss/screen.scss */
+#shoutout .bubble.negative {
+  color: red;
+}
+/* line 80, ../scss/screen.scss */
+#shoutout .bubble:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 20px 0 20px 27px;
+  border-color: transparent #FFFFFF;
+  display: block;
+  width: 0;
+  z-index: 1;
+  right: -27px;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 95, ../scss/screen.scss */
+#choices {
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  top: 50%;
+  left: 1%;
+  -moz-transform: translate3d(0, -50%, 0);
+  -ms-transform: translate3d(0, -50%, 0);
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+}
+/* line 102, ../scss/screen.scss */
+#choices a {
+  float: left;
+  clear: both;
+  text-shadow: 2px 2px #000000;
+  color: white;
+  font-size: 3em;
+  line-height: 1.25em;
+}
+/* line 109, ../scss/screen.scss */
+#choices a.error {
+  text-decoration: line-through;
+  color: red;
+  cursor: default;
+  pointer-events: none;
+}
+/* line 115, ../scss/screen.scss */
+#choices a.true {
+  color: green;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* line 123, ../scss/screen.scss */
+.photo-person-holder {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 500px;
+  height: 500px;
+  max-width: 800px;
+  z-index: 9;
+}
+
+/* line 132, ../scss/screen.scss */
+.photo-person-part {
+  position: absolute;
+  width: 500px;
+  z-index: 10;
+}
+
+/* line 138, ../scss/screen.scss */
+.photo-person-top {
+  bottom: 282px;
+  transform-origin: center center;
+}
+/* line 141, ../scss/screen.scss */
+.photo-person-top.animate {
+  -webkit-animation: bounce .5s infinite;
+}
+
+/* line 145, ../scss/screen.scss */
+.photo-person-bottom {
+  bottom: 0;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  25% {
+    -moz-transform: translateY(-40px) rotate(5deg) translateX(10px);
+    -ms-transform: translateY(-40px) rotate(5deg) translateX(10px);
+    -webkit-transform: translateY(-40px) rotate(5deg) translateX(10px);
+    transform: translateY(-40px) rotate(5deg) translateX(10px);
+  }
+  50% {
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  75% {
+    -moz-transform: translateY(-40px) rotate(-5deg) translateX(-10px);
+    -ms-transform: translateY(-40px) rotate(-5deg) translateX(-10px);
+    -webkit-transform: translateY(-40px) rotate(-5deg) translateX(-10px);
+    transform: translateY(-40px) rotate(-5deg) translateX(-10px);
+  }
+  100% {
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
