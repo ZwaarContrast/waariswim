@@ -64,7 +64,7 @@
   },
   performRequest:function(city){
   	var _self = this;
-  	var serverUrl="http://api.flickr.com/services/rest/?method=flickr.photos.search";
+  	var serverUrl="https://api.flickr.com/services/rest/?method=flickr.photos.search";
 
   	var data = {
   		nojsoncallback:1,
@@ -144,7 +144,7 @@
   },
   getRandomShout: function(mood){
   	this.positiveShouts = ['Goedzo!','Jij bent slim!','Mega goed','Toppertje!','Bijna net zo slim als Wim!'];
-  	this.negativeShouts = ['Dombo!','Sjonge jonge...','Kneus!','Kom je uit een ei ofzo?','Sukkel!','Ben je dom ofzo?','Je bent niet zo goed bezig!','Ik ben veel slimmer dan jij!'];
+  	this.negativeShouts = ['Dombo!','Sjonge jonge...','Kneus!','Kom je uit een ei ofzo','Sukkel!','Ben je dom ofzo?','Je bent niet zo goed bezig!','Ik ben veel slimmer dan jij!'];
   	this.encouragingShouts = ['Loopt je hardeschijf vast ofzo...','Duurt saai!','Schiet eens op!','Ben je zo sloom geboren?','Duurt!'];
   	if(mood=="positive"){
   		return this.positiveShouts[Math.floor(Math.random()*this.positiveShouts.length)];
